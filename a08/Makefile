@@ -1,7 +1,10 @@
-default: out
+.PHONY: run clean
 
-out: a08.c
-	gcc -g -ansi -pedantic -Wall a08.c -o out 
+a08: a08.c
+	cc -g -ansi -pedantic -Wall a08.c -o a08 
+	
+run: a08
+	./a08
 
 clean:
-	-rm -f out
+	rm a08
